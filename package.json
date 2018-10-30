@@ -1,0 +1,57 @@
+{
+  "name": "next-initializer",
+  "version": "1.0.0",
+  "description": "A GitHub application that helps to initialize a project.",
+  "author": "Braimbridge, Adam <adam@braimbridge.com> (https://github.com/adambraimbridge)",
+  "license": "MIT",
+  "repository": "https://github.com/Financial-Times-Sandbox/next-initializer.git",
+  "homepage": "https://github.com/Financial-Times-Sandbox/next-initializer",
+  "bugs": "https://github.com/Financial-Times-Sandbox/next-initializer/issues",
+  "keywords": [
+    "probot",
+    "github",
+    "probot-app"
+  ],
+  "scripts": {
+    "dev": "nodemon",
+    "start": "probot run ./index.js",
+    "lint": "standard --fix",
+    "test": "jest",
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage"
+  },
+  "dependencies": {
+    "probot": "^7.2.0"
+  },
+  "devDependencies": {
+    "@financial-times/secret-squirrel": "^2.10.3",
+    "husky": "^1.1.2",
+    "jest": "^22.4.3",
+    "nodemon": "^1.17.2",
+    "smee-client": "^1.0.2",
+    "standard": "^10.0.3"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      ".env",
+      "."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "secret-squirrel",
+      "commit-msg": "secret-squirrel-commitmsg"
+    }
+  }
+}

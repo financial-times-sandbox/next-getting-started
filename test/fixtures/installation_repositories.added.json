@@ -1,0 +1,73 @@
+{
+	"action": "added",
+	"installation": {
+		"id": 387114,
+		"account": {
+			"login": "financial-times-sandbox",
+			"id": 43821550,
+			"node_id": "redacted",
+			"avatar_url": "https://avatars2.githubusercontent.com/u/43821550?v=4",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/financial-times-sandbox",
+			"html_url": "https://github.com/financial-times-sandbox",
+			"followers_url": "https://api.github.com/users/financial-times-sandbox/followers",
+			"following_url": "https://api.github.com/users/financial-times-sandbox/following{/other_user}",
+			"gists_url": "https://api.github.com/users/financial-times-sandbox/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/financial-times-sandbox/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/financial-times-sandbox/subscriptions",
+			"organizations_url": "https://api.github.com/users/financial-times-sandbox/orgs",
+			"repos_url": "https://api.github.com/users/financial-times-sandbox/repos",
+			"events_url": "https://api.github.com/users/financial-times-sandbox/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/financial-times-sandbox/received_events",
+			"type": "Organization",
+			"site_admin": false
+		},
+		"repository_selection": "selected",
+		"access_tokens_url": "https://api.github.com/installations/387114/access_tokens",
+		"repositories_url": "https://api.github.com/installation/repositories",
+		"html_url": "https://github.com/organizations/financial-times-sandbox/settings/installations/387114",
+		"app_id": 19051,
+		"target_id": 43821550,
+		"target_type": "Organization",
+		"permissions": {
+			"issues": "write"
+		},
+		"events": [
+			"issues"
+		],
+		"created_at": 1539617059,
+		"updated_at": 1539617059,
+		"single_file_name": null
+	},
+	"repository_selection": "selected",
+	"repositories_added": [
+		{
+			"id": 151578406,
+			"node_id": "MDEwOlJlcG9zaXRvcnkxNTE1Nzg0MDY=",
+			"name": "Itchy-Butter",
+			"full_name": "financial-times-sandbox/Itchy-Butter",
+			"private": false
+		}
+	],
+	"repositories_removed": [],
+	"sender": {
+		"login": "adambraimbridge",
+		"id": 224547,
+		"node_id": "MDQ6VXNlcjIyNDU0Nw==",
+		"avatar_url": "https://avatars3.githubusercontent.com/u/224547?v=4",
+		"gravatar_id": "",
+		"url": "https://api.github.com/users/adambraimbridge",
+		"html_url": "https://github.com/adambraimbridge",
+		"followers_url": "https://api.github.com/users/adambraimbridge/followers",
+		"following_url": "https://api.github.com/users/adambraimbridge/following{/other_user}",
+		"gists_url": "https://api.github.com/users/adambraimbridge/gists{/gist_id}",
+		"starred_url": "https://api.github.com/users/adambraimbridge/starred{/owner}{/repo}",
+		"subscriptions_url": "https://api.github.com/users/adambraimbridge/subscriptions",
+		"organizations_url": "https://api.github.com/users/adambraimbridge/orgs",
+		"repos_url": "https://api.github.com/users/adambraimbridge/repos",
+		"events_url": "https://api.github.com/users/adambraimbridge/events{/privacy}",
+		"received_events_url": "https://api.github.com/users/adambraimbridge/received_events",
+		"type": "User",
+		"site_admin": false
+	}
+}
