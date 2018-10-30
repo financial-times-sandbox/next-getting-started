@@ -1,0 +1,28 @@
+{
+	"title": "Config",
+	"description": "Schema to valid JSON data",
+	"type": "object",
+	"properties": {
+		"action": {
+			"description": "Add repository to or remove repository from account.",
+			"type": "string"
+		},
+		"installation": {
+			"description": "Installation details for account",
+			"type": "object",
+			"properties": {
+				"id": {
+					"description": "An account ID",
+					"type": "number"
+				}
+			},
+			"required": ["id"]
+		},
+		"repositories_added": {
+			"description": "An array of objects that reference repositories added to the account",
+			"type": "array",
+			"minItems": 1
+		}
+	},
+	"required": ["action", "installations", "repositories_added"]
+}
