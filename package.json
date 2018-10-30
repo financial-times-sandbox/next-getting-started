@@ -15,7 +15,8 @@
   "scripts": {
     "dev": "nodemon",
     "start": "probot run ./index.js",
-    "lint": "standard --fix",
+    "lint": "eslint --fix ./index.js test/",
+    "lint-check": "eslint --print-config . | eslint-config-prettier-check",
     "test": "jest",
     "test:watch": "jest --watch --notify --notifyMode=change --coverage"
   },
@@ -24,11 +25,15 @@
   },
   "devDependencies": {
     "@financial-times/secret-squirrel": "^2.10.3",
+    "eslint": "^5.8.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-no-only-tests": "^2.0.1",
     "husky": "^1.1.2",
     "jest": "^22.4.3",
     "nodemon": "^1.17.2",
-    "smee-client": "^1.0.2",
-    "standard": "^10.0.3"
+    "precise-commits": "^1.0.2",
+    "prettier": "^1.14.3",
+    "smee-client": "^1.0.2"
   },
   "engines": {
     "node": ">= 8.3.0"
@@ -50,8 +55,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "secret-squirrel",
-      "commit-msg": "secret-squirrel-commitmsg"
+      "pre-commit": "npm run lint && secret-squirrel"
     }
   }
 }
