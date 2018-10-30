@@ -6,7 +6,7 @@ const myProbotApp = require('..')
 const installationRepositoriesAddedPayload = require('./fixtures/installation_repositories.added.json')
 
 describe('My Probot app', () => {
-  let app, github
+  let app; let github
 
   beforeEach(() => {
     app = new Application()
