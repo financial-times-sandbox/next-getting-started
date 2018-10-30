@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 /**
  * @param {import('probot').Application} app - Probot's Application class.
  * See: https://probot.github.io/docs/development/
