@@ -5,28 +5,15 @@
  * See: https://probot.github.io/docs/development/
  */
 
-const isValid = context => {
-	if (!context.payload) {
-		return false;
-	}
-	if (!context.payload.action || context.payload.action !=='added') {
-		return false;
-	}
-	if (!context.payload.installation) {
-		return false;
-	}
-	if (!context.payload.installation.id || context.payload.installation.id !== 387114) {
-		return false;
-	}
-	if (!context.payload.repositories_added || !Array.isArray(context.payload.repositories_added) || !context.payload.repositories_added.length > 0) {
-		return false;
-	}
-	return true;
-}
+const validator = require('is-my-json-valid');
+const config = require('./schemas/config.schema.json');
+const validate = validator(config, {
+	verbose: true
+});
 
 module.exports = app => {
 	app.on('installation_repositories', async context => {
-		if (isValid(context)) {
+		if (validate(context.payload)) {
 			return Promise.all(context.payload.repositories_added.map(repository => {
 				const [owner, repo] = repository.full_name.split('/');
 				const payload = {
@@ -39,7 +26,7 @@ module.exports = app => {
 				return context.github.issues.create(payload)
 			}))
 		} else {
-			console.log('Context was not valid.');
+			console.log(validate.errors);
 		}
-	})
-}
+	});
+};
