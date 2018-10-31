@@ -56,7 +56,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && secret-squirrel"
+      "pre-commit": "secret-squirrel",
+      "commit-msg": "secret-squirrel-commitmsg"
     }
   }
 }
