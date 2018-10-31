@@ -6,13 +6,13 @@
  */
 
 const validator = require('is-my-json-valid');
-const config = require('./schemas/config.schema.json');
-const validate = validator(config, {
+const installationSchema = require('./schemas/installation.schema.json');
+const validate = validator(installationSchema, {
 	verbose: true
 });
 
-module.exports = app => {
-	app.on('installation_repositories', async context => {
+module.exports = (app) => {
+	app.on('installation_repositories', async (context) => {
 		if (validate(context.payload)) {
 			return Promise.all(context.payload.repositories_added.map(repository => {
 				const [owner, repo] = repository.full_name.split('/');
@@ -21,10 +21,11 @@ module.exports = app => {
 					repo: repo,
 					title: 'Next-initializer was installed.',
 					body: 'This is a new issue.'
-				}
-				console.log('Creating issue:',payload)
-				return context.github.issues.create(payload)
-			}))
+				};
+				console.log('Creating issue:',payload);
+
+				return context.github.issues.create(payload);
+			}));
 		} else {
 			console.log(validate.errors);
 		}
