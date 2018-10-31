@@ -5,7 +5,7 @@ const myProbotApp = require('..')
 
 const installationRepositoriesAddedPayload = require('./fixtures/installation_repositories.added.json')
 
-describe('My Probot app', () => {
+describe('The next-getting-started GitHub application instance', () => {
   let app; let github
 
   beforeEach(() => {
@@ -21,7 +21,7 @@ describe('My Probot app', () => {
     app.auth = () => Promise.resolve(github)
   })
 
-  test('creates an issue when a repository is added to the next-initializer GitHub application instance', async () => {
+  test('creates an issue when a repository is added to the next-getting-started GitHub application instance', async () => {
     // Simulates delivery of a installation_repositories webhook
     await app.receive({
       name: 'installation_repositories',

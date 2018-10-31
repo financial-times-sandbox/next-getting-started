@@ -8,7 +8,8 @@
 const validator = require('is-my-json-valid');
 const installationSchema = require('./schemas/installation.schema.json');
 const validate = validator(installationSchema, {
-	verbose: true
+	verbose: true,
+	greedy: true
 });
 
 module.exports = (app) => {
@@ -19,7 +20,7 @@ module.exports = (app) => {
 				const payload = {
 					owner: owner,
 					repo: repo,
-					title: 'Next-initializer was installed.',
+					title: '🔰  Getting started on your new project',
 					body: 'This is a new issue.'
 				};
 				console.log('Creating issue:',payload);
@@ -27,7 +28,7 @@ module.exports = (app) => {
 				return context.github.issues.create(payload);
 			}));
 		} else {
-			console.log(validate.errors);
+			console.error(validate.errors);
 		}
 	});
 };

@@ -1,6 +1,6 @@
-# 🍽 Next Initializer
+# 🔰  Next Getting Started
 
-A GitHub application that helps to initialize a project.
+A GitHub application that helps to get started on a project.
 
 ## Setup
 

@@ -1,12 +1,12 @@
 {
-  "name": "next-initializer",
+  "name": "next-getting-started",
   "version": "1.0.0",
-  "description": "A GitHub application that helps to initialize a project.",
+  "description": "A GitHub application that helps to get started on a project.",
   "author": "Braimbridge, Adam <adam@braimbridge.com> (https://github.com/adambraimbridge)",
   "license": "MIT",
-  "repository": "https://github.com/Financial-Times-Sandbox/next-initializer.git",
-  "homepage": "https://github.com/Financial-Times-Sandbox/next-initializer",
-  "bugs": "https://github.com/Financial-Times-Sandbox/next-initializer/issues",
+  "repository": "https://github.com/Financial-Times-Sandbox/next-getting-started.git",
+  "homepage": "https://github.com/Financial-Times-Sandbox/next-getting-started",
+  "bugs": "https://github.com/Financial-Times-Sandbox/next-getting-started/issues",
   "keywords": [
     "probot",
     "github",
