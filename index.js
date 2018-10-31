@@ -10,7 +10,8 @@ const installationSchema = require('./schemas/installation.schema.json');
 const validate = validator(installationSchema, {
 	verbose: true,
 	greedy: true
-});
+})
+const tasks = require('./tasks');
 
 module.exports = (app) => {
 	app.on('installation_repositories', async (context) => {
@@ -20,10 +21,10 @@ module.exports = (app) => {
 				const payload = {
 					owner: owner,
 					repo: repo,
-					title: '🔰  Getting started on your new project',
-					body: 'This is a new issue.'
+					title: '🔰 Getting started on your new project',
+					body: tasks
 				};
-				console.log('Creating issue:',payload);
+				// console.log('Creating issue:',payload);
 
 				return context.github.issues.create(payload);
 			}));
